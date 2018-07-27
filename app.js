@@ -1,15 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
-//const passport = require('passport');
+const passport = require('passport');
 
 // Passport Config
-//require('./config/passport')(passport);
+require('./config/passport')(passport);
 
 // Load Routes
-//const auth = require('./routes/auth');
+const auth = require('./routes/auth');
 
 // Load Keys
-//const keys = require('./config/keys');
+const keys = require('./config/keys');
 
 // // Map global promises
 // mongoose.Promise = global.Promise;
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 });
 
 // // Use Routes
-// app.use('/auth', auth);
+ app.use('/auth', auth);
 
  const port = process.env.PORT || 5000;
 
